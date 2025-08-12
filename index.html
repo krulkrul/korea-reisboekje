@@ -27,6 +27,7 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             border-radius: 15px;
             overflow: hidden;
+            width: 100%;
         }
         
         .cover {
@@ -79,6 +80,8 @@
         .chapter {
             padding: 40px;
             border-bottom: 3px solid #f8f9fa;
+            max-width: 100%;
+            overflow-x: hidden;
         }
         
         .chapter:last-child {
@@ -179,6 +182,9 @@
             padding: 10px;
             background: rgba(52, 152, 219, 0.05);
             border-radius: 8px;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
         }
         
         .activity-icon {
@@ -187,6 +193,7 @@
             margin-right: 12px;
             margin-top: 2px;
             flex-shrink: 0;
+            min-width: 20px;
         }
         
         .activity-text {
@@ -194,7 +201,17 @@
             color: #34495e;
             word-wrap: break-word;
             overflow-wrap: break-word;
-            max-width: 100%;
+            max-width: calc(100% - 32px);
+            hyphens: auto;
+            line-height: 1.5;
+        }
+        
+        .activity-text > div {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 5px;
+            line-height: 1.4;
+            word-break: break-word;
         }
         
         .transport-info {
